@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
         recyclerview.setAdapter(adapter);
         recyclerview.setLayoutManager(new StaggeredGridLayoutManager(2,
                 StaggeredGridLayoutManager.VERTICAL));
-        if (mMainViewModel.moviesList != null && mMainViewModel.moviesList.size() > 0) {
+        if (mMainViewModel.moviesList != null && !mMainViewModel.moviesList.isEmpty()) {
             adapter.addMoviesToAdapter(mMainViewModel.moviesList);
         }
     }
@@ -94,8 +94,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     @Override
     public void updateAdapter(List<Movie> moviesList) {
         adapter.addMoviesToAdapter(moviesList);
-        mActivityMainBinding.notifyPropertyChanged(BR.mainViewModel);
-
     }
 
     @Override
