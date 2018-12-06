@@ -52,9 +52,23 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
         recyclerview.setAdapter(adapter);
         recyclerview.setLayoutManager(new StaggeredGridLayoutManager(2,
                 StaggeredGridLayoutManager.VERTICAL));
+        setListFomViewModel();
+    }
+
+
+    void setListFomViewModel() {
         if (mMainViewModel.moviesList != null && !mMainViewModel.moviesList.isEmpty()) {
-            adapter.addMoviesToAdapter(mMainViewModel.moviesList);
+            if (adapter != null) {
+                adapter.addMoviesToAdapter(mMainViewModel.moviesList);
+            }
+
         }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setListFomViewModel();
     }
 
     @Override

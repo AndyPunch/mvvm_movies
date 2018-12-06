@@ -6,7 +6,7 @@ import android.arch.lifecycle.ViewModelProvider;
 import dagger.Module;
 import dagger.Provides;
 import program.java.punch.andr.mvvmmovies.ViewModelProviderFactory;
-import program.java.punch.andr.mvvmmovies.data.interfaces.DataController;
+import program.java.punch.andr.mvvmmovies.data.DataController;
 import program.java.punch.andr.mvvmmovies.ui.favourite.viewModel.FavouriteViewModel;
 
 

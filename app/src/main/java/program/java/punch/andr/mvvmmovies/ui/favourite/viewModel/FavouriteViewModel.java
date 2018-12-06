@@ -5,7 +5,7 @@ import android.databinding.ObservableList;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import program.java.punch.andr.mvvmmovies.data.interfaces.DataController;
+import program.java.punch.andr.mvvmmovies.data.DataController;
 import program.java.punch.andr.mvvmmovies.model.Movie;
 import program.java.punch.andr.mvvmmovies.ui.base.BaseViewModel;
 import program.java.punch.andr.mvvmmovies.ui.favourite.interfaces.FavouriteMvvmView;

@@ -4,7 +4,7 @@ import android.arch.lifecycle.ViewModel;
 import android.databinding.ObservableBoolean;
 
 import io.reactivex.disposables.CompositeDisposable;
-import program.java.punch.andr.mvvmmovies.data.interfaces.DataController;
+import program.java.punch.andr.mvvmmovies.data.DataController;
 
 public abstract class BaseViewModel<I> extends ViewModel {
 

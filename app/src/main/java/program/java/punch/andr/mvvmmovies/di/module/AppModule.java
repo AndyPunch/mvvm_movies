@@ -12,7 +12,8 @@ import program.java.punch.andr.mvvmmovies.data.AppDataController;
 import program.java.punch.andr.mvvmmovies.data.db.AppDatabase;
 import program.java.punch.andr.mvvmmovies.data.db.dbHelper.AppDbHelper;
 import program.java.punch.andr.mvvmmovies.data.db.dbHelper.interfaces.DbHelper;
-import program.java.punch.andr.mvvmmovies.data.interfaces.DataController;
+import program.java.punch.andr.mvvmmovies.data.DataController;
+import program.java.punch.andr.mvvmmovies.data.remote.ApiHelper;
 import program.java.punch.andr.mvvmmovies.di.scope.DatabaseInfo;
 import program.java.punch.andr.mvvmmovies.utils.AppConstants;
 import program.java.punch.andr.mvvmmovies.utils.ResourceProvider;
@@ -45,6 +46,12 @@ public class AppModule {
                 .addConverterFactory(gsonConverterFactory)
                 .addCallAdapterFactory(rxJava2CallAdapterFactory)
                 .build();
+    }
+
+    @Singleton
+    @Provides
+    ApiHelper provideApiHelper(Retrofit retrofit)  {
+        return retrofit.create(ApiHelper.class);
     }
 
     @Provides
